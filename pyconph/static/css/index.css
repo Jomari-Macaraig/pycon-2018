@@ -1,0 +1,87 @@
+body {
+  margin: 0vw 0vw 0vw 0vw;
+}
+
+.banner-section {
+  background-color: #ffffff;
+  background-image: url(../images/home/home-bottom.png), url(../images/home/home-top.png);
+  background-repeat: no-repeat;
+  background-position: right bottom, top left;
+  background-size: contain;
+  min-height: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-section > .title {
+  background-image: url(../images/home/header-logo.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  min-height: 26vw;
+  min-width: 26vw;
+  margin-left: 11vw;
+  margin-top: 10vw;
+}
+
+.banner-section > .title > .action {
+  margin-top: 35vw;
+  min-height: 20vw;
+  min-width: 20vw;
+}
+
+.banner-section > .title > .action > #buy-tickets {
+  font-family: "Circular-Pro-Bold";
+  border: .4vw solid #501cd7;
+  border-radius: 3.5vw;
+  padding: .75vw 5vw .75vw 5vw;
+  color: #501cd7;
+  font-size: 2vw;
+  text-decoration: none;
+}
+
+.about-section > .content > .title {
+  font-family: "Circular-Pro-Bold";
+  color: #e96de3;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.about-section > .content > .description > p {
+}
+
+.about-section > .content > .description, .about-section > .content > .other-info > .other-info-container > .description {
+  max-width: 50vw;
+  font-family: "Circular-Pro-Book";
+  color: #ffffff;
+  font-size: 1.3vw;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.about-section > .content > .other-info > .other-info-container {
+  display: inline-block;
+  min-width: 25vw;
+}
+
+.about-section > .content > .other-info > .other-info-container > .title {
+  font-family: "Circular-Pro-Bold";
+  color: #e96de3;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.about-section {
+  background-color: #501cd7;
+  background-image: url(../images/about/about-1.png), url(../images/about/about-2.png), url(../images/about/about-3.png);
+  background-repeat: no-repeat;
+  background-position: 75% top, right 115%, left 118%;
+  min-height: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-section > .content {
+  margin-top: 7vw;
+  margin-left: 7vw;
+}

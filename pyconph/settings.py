@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'pyconph.program',
+    'pyconph.web',
 ]
 
 MIDDLEWARE = [
