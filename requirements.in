@@ -5,3 +5,4 @@ django-registration-redux
 gunicorn
 psycopg2
 python-dotenv
+Pillow

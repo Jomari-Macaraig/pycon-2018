@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    web:
+        restart: always
+        build:
+          context: ../
+        image: pycon2018-web
+        volumes:
+          - ../:/srv/funny/pycon2018
+        container_name: pycon2018-web
+        working_dir: "/srv/funny/pycon2018"
+        command: scripts/docker_startup.sh
+        ports:
+          - "2329:22"
