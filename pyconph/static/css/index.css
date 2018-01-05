@@ -2,6 +2,16 @@ body {
   margin: 0vw 0vw 0vw 0vw;
 }
 
+#venue {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.icon {
+  border: 1px solid black;
+  font-size: 2vw;
+}
+
 .banner-section {
   background-color: #ffffff;
   background-image: url(../images/home/home-bottom.png), url(../images/home/home-top.png);
@@ -47,10 +57,8 @@ body {
   font-weight: bold;
 }
 
-.about-section > .content > .description > p {
-}
-
-.about-section > .content > .description, .about-section > .content > .other-info > .other-info-container > .description {
+.about-section > .content > .description,
+.about-section > .content > .other-info > .other-info-container > .description {
   max-width: 50vw;
   font-family: "Circular-Pro-Book";
   color: #ffffff;
@@ -73,15 +81,131 @@ body {
 
 .about-section {
   background-color: #501cd7;
-  background-image: url(../images/about/about-1.png), url(../images/about/about-2.png), url(../images/about/about-3.png);
+  background-image: url(../images/about/about-1.png),
+                    url(../images/about/about-2.png),
+                    url(../images/about/about-3.png);
   background-repeat: no-repeat;
-  background-position: 75% top, right 115%, left 118%;
+  background-position: 75% top, right 115%, left 117%;
+  background-size: 40vw, 35vw, 25vw;
   min-height: 70vw;
   display: flex;
   flex-wrap: wrap;
 }
 
-.about-section > .content {
+.about-section > .content,
+.speakers-section > .content {
   margin-top: 7vw;
   margin-left: 7vw;
+  margin-right: 7vw;
 }
+
+.speakers-section {
+  background-image: url(../images/speakers/speakers-1.png),
+                    url(../images/speakers/speakers-2.png),
+                    url(../images/speakers/speakers-3.png);
+  background-repeat: no-repeat;
+  background-position: 95% 2%, left center, right center;
+  background-size: 25vw, 35vw, 15vw;
+  background-color: #43eaf7;
+  min-height: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.speakers-bottom-section {
+  background-image: url(../images/speakers/speakers-bottom.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;;
+  background-size: contain;
+  background-color: #43eaf7;
+  min-height: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.speakers-section > .content > .title {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.keynote-name,
+.speakers-section > .content > .keynote > .title {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.keynote-name {
+  margin-top: 2vw;
+}
+
+.keynote {
+  margin-top: 2vw;
+}
+
+.keynote-image {
+  max-width: 18vw;
+  max-height: 18vw;
+}
+
+.keynote-profile {
+  margin-top: 2vw;
+  max-height: 40vw;
+}
+
+.keynote-company {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 1.75vw;
+  font-weight: bold;
+  min-height: 5vw;
+}
+
+.keynote-description {
+  color: #ffffff;
+  font-family: "Circular-Pro-Bold";
+  font-size: 1.5vw;
+  margin-top: 1vw;
+}
+
+.other-speakers {
+  margin-top: 6vw;
+}
+
+.other-name {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 1.75vw;
+  font-weight: bold;
+}
+
+.other-description {
+  color: #ffffff;
+  font-family: "Circular-Pro-Bold";
+  font-size: 1vw;
+  margin-top: 1vw;
+  min-height: 15vw;
+}
+
+.other-profile {
+  margin-top: 2vw;
+  max-height: 30vw;
+}
+
+.other-company {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 1.25vw;
+  font-weight: bold;
+  min-height: 3vw;
+}
+
+.other-image {
+  max-width: 13vw;
+  max-height: 13vw;
+}
+

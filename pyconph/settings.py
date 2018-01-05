@@ -142,3 +142,10 @@ DEFAULT_FROM_EMAIL = 'pycon@python.ph'
 
 LOGIN_REDIRECT_URL = 'cfp'
 LOGOUT_REDIRECT_URL = 'cfp'
+
+
+##### MEDIA CONFIGURATION
+# https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-MEDIA_ROOT
+# https://docs.djangoproject.com/en/1.11/ref/settings/#media-url
+MEDIA_ROOT = os.path.join(BASE_DIR, __package__, 'media')
+MEDIA_URL = '/media/'
