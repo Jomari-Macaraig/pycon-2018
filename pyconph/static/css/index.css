@@ -92,6 +92,7 @@ body {
   flex-wrap: wrap;
 }
 
+.code-of-conduct-section > .content,
 .about-section > .content,
 .speakers-section > .content {
   margin-top: 7vw;
@@ -209,3 +210,43 @@ body {
   max-height: 13vw;
 }
 
+.code-of-conduct-section {
+  background-color: #501cd7;
+  background-image: url(../images/about/about-1.png),
+                    url(../images/about/about-3.png);
+  background-repeat: no-repeat;
+  background-position: 75% top, left 117%;
+  background-size: 40vw, 25vw;
+  min-height: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code-of-conduct-section > .content > div > div > .second-title,
+.code-of-conduct-section > .content > div > div > .title {
+  color: #e96de3;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 3.5vw;
+}
+
+.code-of-conduct-section > .content > div > div > .title {
+  font-family: "Circular-Pro-Bold";
+}
+
+.code-of-conduct-section > .content > div > div > .second-title {
+  font-family: "Circular-Pro-Book";
+}
+
+.code-of-conduct-section > .content > div > div > .description > p {
+  font-family: "Circular-Pro-Book";
+  color: #ffffff;
+  font-size: 1.3vw;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.cod {
+  text-decoration: underline;
+  color: #ffffff;
+}

@@ -13,3 +13,18 @@ services:
         command: scripts/docker_startup.sh
         ports:
           - "2329:22"
+
+    nginx:
+        restart: always
+        build:
+            context: ../
+            dockerfile: DockerfileNginx
+        image: pycon2018-nginx
+        container_name: pycon2018-nginx
+        volumes_from:
+            - web
+        links:
+            - web
+        ports:
+            - "80:80"
+            - "443:443"
