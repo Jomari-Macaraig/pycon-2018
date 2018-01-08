@@ -16,13 +16,23 @@ class Speaker(models.Model):
     image = models.ImageField(upload_to='uploads/speaker')
     speaker_type = models.CharField(max_length=1, default=NORMAL, choices=CHOICES)
 
+    def __str__(self):
+        return self.name
+
 
 class SponsorType(models.Model):
     name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name
 
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
     image = models.ImageField(upload_to='uploads/sponsor')
+    link = models.URLField()
     sponsor_type = models.ForeignKey(SponsorType)
+
+    def __str__(self):
+        return self.name

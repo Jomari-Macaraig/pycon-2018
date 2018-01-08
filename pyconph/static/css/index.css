@@ -94,6 +94,7 @@ body {
 
 .code-of-conduct-section > .content,
 .about-section > .content,
+.sponsors-section > .content,
 .speakers-section > .content {
   margin-top: 7vw;
   margin-left: 7vw;
@@ -124,7 +125,7 @@ body {
   flex-wrap: wrap;
 }
 
-
+.sponsors-section > .content > .title,
 .speakers-section > .content > .title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
@@ -132,7 +133,7 @@ body {
   font-weight: bold;
 }
 
-.keynote-name,
+.sponsors-section > .content > .sponsor-type > .title,
 .speakers-section > .content > .keynote > .title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
@@ -141,13 +142,18 @@ body {
 }
 
 .keynote-name {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-weight: bold;
   margin-top: 2vw;
+  font-size: 2.5vw;
 }
 
 .keynote {
   margin-top: 2vw;
 }
 
+.sponsor-image,
 .keynote-image {
   max-width: 18vw;
   max-height: 18vw;
@@ -260,4 +266,36 @@ body {
   min-height: 44vw;
   display: flex;
   flex-wrap: wrap;
+}
+
+.sponsors-section {
+  background-color: #ffffff;
+  background-image: url(../images/sponsors/sponsors-1.png),
+                    url(../images/sponsors/sponsors-2.png),
+                    url(../images/sponsors/sponsors-3.png);
+  background-repeat: no-repeat;
+  background-position: 95% top, left 75%, 95% 95%;
+  background-size: 25vw, 25vw, 25vw;
+  min-height: 150vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sponsors-section > .content > .sponsor-type > .container > .row > .description {
+  font-family: "Circular-Pro-Book";
+  color: #501cd7;
+  font-size: 1.2vw;
+  min-height: 5vw;
+}
+
+.sponsors-section > .content > .sponsor-type > .container > .row > .image > .sponsor-name > a {
+  text-decoration: none;
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 1.7vw;
+}
+
+.sponsors-section > .content > .sponsor-type > .container {
+  margin-top: 2.3vw;
+  margin-bottom: 2.3vw;
 }
