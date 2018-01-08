@@ -212,10 +212,9 @@ body {
 
 .code-of-conduct-section {
   background-color: #501cd7;
-  background-image: url(../images/about/about-1.png),
-                    url(../images/about/about-3.png);
+  background-image: url(../images/about/about-1.png);
   background-repeat: no-repeat;
-  background-position: 75% top, left 117%;
+  background-position: 75% top;
   background-size: 40vw, 25vw;
   min-height: 70vw;
   display: flex;
@@ -249,4 +248,16 @@ body {
 .cod {
   text-decoration: underline;
   color: #ffffff;
+}
+
+.code-of-conduct-bottom-section {
+  background-color: #501cd7;
+  background-image: url(../images/about/about-2.png),
+                    url(../images/about/about-3.png);
+  background-repeat: no-repeat;
+  background-position: right 200%, left 140%;
+  background-size: 35vw, 25vw;
+  min-height: 44vw;
+  display: flex;
+  flex-wrap: wrap;
 }
