@@ -1,0 +1,31 @@
+<section id="sponsors" class="sponsors-section">
+  <div class="content">
+    <div class="title">
+      Sponsors
+    </div>
+    {% for key, value in sponsors.items %}
+      {% if value %}
+        <div class="sponsor-type">
+          <div class="title">
+            {{ key }}
+          </div>
+          {% for sponsor in value %}
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4 image text-center">
+                  <img class="sponsor-image img-circle" src="{{ sponsor.image.url }}"/>
+                  <div class="sponsor-name">
+                    <a href="{{ sponsor.link }}">{{ sponsor.name }}</a>
+                  </div>
+                </div>
+                <div class="col-sm-8 description">
+                  {{ sponsor.description }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
