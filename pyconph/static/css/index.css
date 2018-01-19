@@ -94,7 +94,6 @@ body {
 
 .code-of-conduct-section > .content,
 .about-section > .content,
-.sponsors-section > .content,
 .speakers-section > .content {
   margin-top: 7vw;
   margin-left: 7vw;
@@ -125,7 +124,9 @@ body {
   flex-wrap: wrap;
 }
 
+.organizers-section > .content > .title,
 .sponsors-section > .content > .title,
+.partners-section > .content > .title,
 .speakers-section > .content > .title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
@@ -133,6 +134,7 @@ body {
   font-weight: bold;
 }
 
+.partners-section > .content > .partner-type > .title,
 .sponsors-section > .content > .sponsor-type > .title,
 .speakers-section > .content > .keynote > .title {
   font-family: "Circular-Pro-Bold";
@@ -268,7 +270,7 @@ body {
   flex-wrap: wrap;
 }
 
-.sponsors-section {
+.osp-section {
   background-color: #ffffff;
   background-image: url(../images/sponsors/sponsors-1.png),
                     url(../images/sponsors/sponsors-2.png),
@@ -281,6 +283,7 @@ body {
   flex-wrap: wrap;
 }
 
+.partners-section > .content > .partner-type > .container > .row > .description,
 .sponsors-section > .content > .sponsor-type > .container > .row > .description {
   font-family: "Circular-Pro-Book";
   color: #501cd7;
@@ -288,6 +291,7 @@ body {
   min-height: 5vw;
 }
 
+.partners-section > .content > .partner-type > .container > .row > .image > .partner-name > a,
 .sponsors-section > .content > .sponsor-type > .container > .row > .image > .sponsor-name > a {
   text-decoration: none;
   font-family: "Circular-Pro-Bold";
@@ -298,4 +302,31 @@ body {
 .sponsors-section > .content > .sponsor-type > .container {
   margin-top: 2.3vw;
   margin-bottom: 2.3vw;
+}
+
+#python-ph-logo {
+  background-image: url(../images/organizers/pythonph-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 40vw;
+}
+
+#iacademy-logo {
+  background-image: url(../images/organizers/iacademy-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 40vw;
+}
+
+.partners-section > .content {
+  margin-bottom: 7vw;
+}
+
+.sponsors-section > .content,
+.organizers-section > .content,
+.partners-section > .content {
+  margin-top: 7vw;
+  margin-left: 7vw;
 }
