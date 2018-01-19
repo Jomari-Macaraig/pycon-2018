@@ -123,6 +123,7 @@ STATIC_ROOT = os.getenv('STATIC_ROOT')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, __package__, 'static'),
 ]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
 # Registration
