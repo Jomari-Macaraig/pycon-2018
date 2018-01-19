@@ -6,3 +6,5 @@ gunicorn
 psycopg2
 python-dotenv
 Pillow
+django-webpack-loader
+djangorestframework

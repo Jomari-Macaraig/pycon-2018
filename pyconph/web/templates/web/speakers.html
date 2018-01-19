@@ -1,31 +1,9 @@
-<section id="speakers" class="speakers-section">
+<section class="speakers-section">
   <div class="content">
     <div class="title">
       Speakers
     </div>
-    <div class="keynote">
-      <div class="title">
-        Keynote
-      </div>
-      <br/>
-      <div class="container">
-        <div class="row">
-          {% for keynote in keynotes %}
-            <div class="col-sm-4 keynote-profile">
-              <img class="keynote-image img-circle" src="{{ keynote.image.url }}"/>
-              <div class="keynote-name">
-                {{ keynote.name }}
-              </div>
-              <div class="keynote-company">
-                {% if keynote.job_title and keynote.company_name %}
-                  {{ keynote.job_title }}, {{ keynote.company_name }}
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+    <div id="keynotes"></div>
     <div class="other-speakers">
       <div class="container">
         <div class="row">

@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^cfp/thanks/$', cfp_thanks, name='cfp_thanks'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^apiv1/', include('pyconph.apiv1.urls', namespace='apiv1')),
     url(r'^$', index, name='index'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

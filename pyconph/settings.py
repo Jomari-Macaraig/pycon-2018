@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'webpack_loader',
+    'rest_framework',
+
+    'pyconph.apiv1',
     'pyconph.program',
     'pyconph.web',
 ]
@@ -149,3 +153,14 @@ LOGOUT_REDIRECT_URL = 'cfp'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#media-url
 MEDIA_ROOT = os.path.join(BASE_DIR, __package__, 'media')
 MEDIA_URL = '/media/'
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/', # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    }
+}

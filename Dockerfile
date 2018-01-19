@@ -17,6 +17,10 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     openssh-server \
     htop \
+    curl \
+    && curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - \
+    && sudo apt-get install -y nodejs \
+    && npm install npm@latest -g \
     && pip3 install -U pip \
     && make init_env \
     && chown funny: -R /srv/funny \

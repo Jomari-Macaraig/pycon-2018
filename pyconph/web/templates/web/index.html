@@ -16,12 +16,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+    {% load render_bundle from webpack_loader %}
     {% include 'web/banner.html' %}
     {% include 'web/about.html' %}
     {% include 'web/speakers.html' %}
     {% include 'web/speakers-bottom.html' %}
-    {% include 'web/sponsor.html' %}
+    {% include 'web/osp.html' %}
     {% include 'web/code-of-conduct.html' %}
     {% include 'web/code-of-conduct-bottom.html' %}
+    {% render_bundle 'keynotes' %}
   </body>
 </html>

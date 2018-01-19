@@ -2,6 +2,9 @@ from django.db import models
 
 # Create your models here.
 
+class Volunteer(models.Model):
+    name = models.CharField(max_length=64)
+
 class Speaker(models.Model):
     NORMAL = 'n'
     KEYNOTE = 'k'
@@ -33,6 +36,24 @@ class Sponsor(models.Model):
     image = models.ImageField(upload_to='uploads/sponsor')
     link = models.URLField()
     sponsor_type = models.ForeignKey(SponsorType)
+
+    def __str__(self):
+        return self.name
+
+
+class PartnerType(models.Model):
+    name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=64)
+    description = models.TextField()
+    image = models.ImageField(upload_to='uploads/partner')
+    link = models.URLField()
+    partner_type = models.ForeignKey(PartnerType)
 
     def __str__(self):
         return self.name

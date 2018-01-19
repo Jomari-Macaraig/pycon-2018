@@ -1,0 +1,31 @@
+<section id="parners" class="partners-section">
+  <div class="content">
+    <div class="title">
+      Partners
+    </div>
+    {% for key, value in partners.items %}
+      {% if value %}
+        <div class="partner-type">
+          <div class="title">
+            {{ key }}
+          </div>
+          {% for partner in value %}
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4 image text-center">
+                  <img class="parnter-image img-circle" src="{{ partner.image.url }}"/>
+                  <div class="partner-name">
+                    <a href="{{ partner.link }}">{{ partner.name }}</a>
+                  </div>
+                </div>
+                <div class="col-sm-8 description">
+                  {{ partner.description }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
