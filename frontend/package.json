@@ -12,7 +12,9 @@
   "dependencies": {
     "axios": "^0.17.1",
     "v-tooltip": "^2.0.0-rc.26",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vue-directive-tooltip": "^1.4.2",
+    "webpack-bundle-tracker": "^0.2.1"
   },
   "browserslist": [
     "> 1%",
