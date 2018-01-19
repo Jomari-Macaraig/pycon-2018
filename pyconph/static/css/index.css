@@ -278,7 +278,7 @@ body {
   background-repeat: no-repeat;
   background-position: 95% top, left 75%, 95% 95%;
   background-size: 25vw, 25vw, 25vw;
-  min-height: 150vw;
+  min-height: 250vw;
   display: flex;
   flex-wrap: wrap;
 }
