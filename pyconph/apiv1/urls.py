@@ -2,7 +2,7 @@ from django.conf.urls import url, include
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from .views import KeynoteListAPIView
+from .views import KeynoteListAPIView, NormalSpeakerListAPIView
 
 
 speaker_patterns = format_suffix_patterns([
@@ -10,6 +10,11 @@ speaker_patterns = format_suffix_patterns([
         r'keynote/list/',
         KeynoteListAPIView.as_view(),
         name='keynote_list'
+    ),
+    url(
+        r'normal/list/',
+        NormalSpeakerListAPIView.as_view(),
+        name='normal_list'
     ),
 ])
 
