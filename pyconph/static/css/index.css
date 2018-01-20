@@ -274,21 +274,19 @@ body {
   background-repeat: no-repeat;
   background-position: 95% top, left 75%, 95% 95%;
   background-size: 25vw, 25vw, 25vw;
-  min-height: 150vw;
+  min-height: 200vw;
   display: flex;
   flex-wrap: wrap;
 }
 
-.partners-section > .content > .partner-type > .container > .row > .description,
-.sponsors-section > .content > .sponsor-type > .container > .row > .description {
+.partners-section > .content > .partner-type > .container > .row > .description {
   font-family: "Circular-Pro-Book";
   color: #501cd7;
   font-size: 1.2vw;
   min-height: 5vw;
 }
 
-.partners-section > .content > .partner-type > .container > .row > .image > .partner-name > a,
-.sponsors-section > .content > .sponsor-type > .container > .row > .image > .sponsor-name > a {
+.partners-section > .content > .partner-type > .container > .row > .image > .partner-name > a {
   text-decoration: none;
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
@@ -296,8 +294,7 @@ body {
 }
 
 .sponsors-section > .content > .sponsor-type > .container {
-  margin-top: 2.3vw;
-  margin-bottom: 2.3vw;
+  margin-top: 2vw;
 }
 
 #python-ph-logo {
@@ -320,7 +317,6 @@ body {
   margin-bottom: 7vw;
 }
 
-.sponsors-section > .content,
 .organizers-section > .content,
 .partners-section > .content {
   margin-top: 7vw;

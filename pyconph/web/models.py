@@ -72,3 +72,6 @@ class Schedule(models.Model):
     description = models.TextField(null=True, blank=True)
     speaker = models.ForeignKey(Speaker, null=True, blank=True)
     day = models.IntegerField(choices=CHOICES, default=DAY1)
+
+    def __str__(self):
+        return self.name

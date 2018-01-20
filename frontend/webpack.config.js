@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     speakers: './src/speaker/main.js',
     schedules: './src/schedules/main.js',
+    sponsors: './src/sponsors/main.js',
   },
   output: {
     path: path.resolve('../pyconph/static/webpack_bundles/'),

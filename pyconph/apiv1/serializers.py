@@ -3,6 +3,7 @@ from rest_framework import serializers
 from pyconph.web.models import (
     Schedule,
     Speaker,
+    Sponsor,
     SponsorType,
 )
 
@@ -36,6 +37,7 @@ class ScheduleSerializer(serializers.ModelSerializer):
 
 
 class SpeakerSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = Speaker
@@ -47,6 +49,25 @@ class SpeakerSerializer(serializers.ModelSerializer):
             'description',
             'image',
         )
+
+    def get_image(self, obj):
+        return obj.image.url
+
+
+class SponsorSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Sponsor
+        fields = (
+            'name',
+            'description',
+            'image',
+            'link',
+        )
+
+    def get_image(self, obj):
+        return obj.image.url
 
 
 class SponsorTypeSerializer(serializers.ModelSerializer):

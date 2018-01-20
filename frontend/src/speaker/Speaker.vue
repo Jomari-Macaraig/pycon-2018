@@ -45,7 +45,6 @@ export default {
 
 </script>
 
-
 <style>
 #description {
   word-wrap: break-word;
@@ -56,4 +55,3 @@ export default {
   height: 25vw;
 }
 </style>
-

@@ -22,10 +22,15 @@
     {% include 'web/speakers.html' %}
     {% include 'web/speakers-bottom.html' %}
     <div id="schedules"></div>
-    {% include 'web/osp.html' %}
+    <section id="osp" class="osp-section">
+      {% include 'web/organizer.html' %}
+      <div id="sponsors"></div>
+      {% include 'web/partners.html' %}
+    </section>
     {% include 'web/code-of-conduct.html' %}
     {% include 'web/code-of-conduct-bottom.html' %}
     {% render_bundle 'schedules' %}
+    {% render_bundle 'sponsors' %}
     {% render_bundle 'speakers' %}
   </body>
 </html>

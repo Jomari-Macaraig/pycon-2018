@@ -3,11 +3,13 @@ from rest_framework.generics import ListAPIView
 from .serializers import (
     ScheduleSerializer,
     SpeakerSerializer,
+    SponsorSerializer,
     SponsorTypeSerializer,
 )
 from pyconph.web.models import (
     Schedule,
     Speaker,
+    Sponsor,
     SponsorType,
 )
 
@@ -43,6 +45,16 @@ class NormalSpeakerListAPIView(ListAPIView):
             speaker_type=Speaker.NORMAL
         )
 
+
+class SponsorListAPIView(ListAPIView):
+
+    model = Sponsor
+    serializer_class = SponsorSerializer
+
+    def get_queryset(self):
+        return self.model.objects.filter(
+            sponsor_type_id=self.kwargs['sponsor_type_id']
+        )
 
 class SponsorTypeListAPIView(ListAPIView):
 
