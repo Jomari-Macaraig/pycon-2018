@@ -1,18 +1,23 @@
 <template>
   <div id="schedule-section">
     <div id="schedule-content">
-      <div class="title">
+      <div class="title" v-if="hasSchedule">
         Schedule
+      </div>
+      <div class="title" v-if="!hasSchedule">
+        Schedule (Coming soon)
       </div>
       <div class="container">
         <div class="row">
           <div class="col-sm-5">
             <schedule v-bind:schedules="scheduleDay1"
-                      v-bind:day="'Feb 24'"></schedule>
+                      v-bind:day="'Feb 24'">
+            </schedule>
           </div>
           <div class="col-sm-5">
             <schedule v-bind:schedules="scheduleDay2"
-                      v-bind:day="'Feb 25'"></schedule>
+                      v-bind:day="'Feb 25'">
+            </schedule>
           </div>
           </div>
           <div class="col-sm-2"></div>
@@ -37,6 +42,12 @@ export default {
     return {
       scheduleDay1: [],
       scheduleDay2: [],
+    }
+  },
+  computed: {
+    hasSchedule () {
+      let hasSchedule = this.scheduleDay1.length || this.scheduleDay2.length ? true : false;
+      return hasSchedule;
     }
   },
   created () {
