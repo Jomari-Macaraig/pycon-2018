@@ -1,17 +1,40 @@
 from rest_framework.generics import ListAPIView
 
 from .serializers import (
+    PartnerSerializer,
+    PartnerTypeSerializer,
     ScheduleSerializer,
     SpeakerSerializer,
     SponsorSerializer,
     SponsorTypeSerializer,
 )
 from pyconph.web.models import (
+    Partner,
+    PartnerType,
     Schedule,
     Speaker,
     Sponsor,
     SponsorType,
 )
+
+
+class PartnerListAPIView(ListAPIView):
+
+    model = Partner
+    serializer_class = PartnerSerializer
+
+    def get_queryset(self):
+        return self.model.objects.filter(
+            partner_type_id=self.kwargs['partner_type_id']
+        )
+
+class PartnerTypeListAPIView(ListAPIView):
+
+    model = PartnerType
+    serializer_class = PartnerTypeSerializer
+
+    def get_queryset(self):
+        return self.model.objects.all()
 
 
 class ScheduleListAPIView(ListAPIView):

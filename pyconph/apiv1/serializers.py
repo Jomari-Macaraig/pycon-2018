@@ -1,11 +1,39 @@
 from rest_framework import serializers
 
 from pyconph.web.models import (
+    Partner,
+    PartnerType,
     Schedule,
     Speaker,
     Sponsor,
     SponsorType,
 )
+
+
+class PartnerSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Partner
+        fields = (
+            'name',
+            'description',
+            'image',
+            'link',
+        )
+
+    def get_image(self, obj):
+        return obj.image.url
+
+
+class PartnerTypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PartnerType
+        fields = (
+            'id',
+            'name'
+        )
 
 
 class ScheduleSerializer(serializers.ModelSerializer):

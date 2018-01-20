@@ -5,6 +5,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from .views import (
     KeynoteListAPIView,
     NormalSpeakerListAPIView,
+    PartnerListAPIView,
+    PartnerTypeListAPIView,
     ScheduleListAPIView,
     SponsorListAPIView,
     SponsorTypeListAPIView,
@@ -45,8 +47,22 @@ sponsor_patterns = format_suffix_patterns([
     ),
 ])
 
+partner_patterns = format_suffix_patterns([
+    url(
+        r'type/list/',
+        PartnerTypeListAPIView.as_view(),
+        name='partner_type_list'
+    ),
+    url(
+        r'type/(?P<partner_type_id>[0-9]+)/list/',
+        PartnerListAPIView.as_view(),
+        name='partner_list'
+    ),
+])
+
 urlpatterns = [
     url(r'speakers', include(speaker_patterns, namespace='speakers')),
     url(r'schedule', include(schedule_patterns, namespace='schedule')),
     url(r'sponsors', include(sponsor_patterns, namespace='sponsors')),
+    url(r'partners', include(partner_patterns, namespace='partners')),
 ]

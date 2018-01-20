@@ -1,42 +1,42 @@
 <template>
-  <div v-if="haveSponsor" class="sponsor-type">
-    <div class="sponsor-type-title">
+  <div v-if="havePartner" class="partner-type">
+    <div class="partner-type-title">
       {{ type.name }}
     </div>
-    <sponsor v-for="sponsor in sponsors"
-             v-bind:sponsor="sponsor">
-    </sponsor>
+    <partner v-for="partner in partners"
+             v-bind:partner="partner">
+    </partner>
   </div>
 </template>
 
 <script>
-import Sponsor from './Sponsor.vue'
+import Partner from './Partner.vue'
 import axios from 'axios'
 
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 export default {
   components: {
-    Sponsor,
+    Partner,
   },
   props: {
     type: [Object]
   },
   data () {
     return {
-      sponsors: [],
+      partners: [],
     }
   },
   computed: {
-    haveSponsor () {
-      return this.sponsors.length ? true : false;
+    havePartner () {
+      return this.partners.length ? true : false;
     }
   },
   created () {
-    let url = 'apiv1/sponsors/type/' + this.type.id + '/list/';
+    let url = 'apiv1/partners/type/' + this.type.id + '/list/';
     axios.get(url)
       .then((response) => {
-        this.sponsors = response.data;
+        this.partners = response.data;
       })
       .catch((error) => {
         console.log(error)
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style>
-.sponsor-type-title {
+.partner-type-title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
   font-size: 2.7vw;

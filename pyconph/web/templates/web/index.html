@@ -25,10 +25,11 @@
     <section id="osp" class="osp-section">
       {% include 'web/organizer.html' %}
       <div id="sponsors"></div>
-      {% include 'web/partners.html' %}
+      <div id="partners"></div>
     </section>
     {% include 'web/code-of-conduct.html' %}
     {% include 'web/code-of-conduct-bottom.html' %}
+    {% render_bundle 'partners' %}
     {% render_bundle 'schedules' %}
     {% render_bundle 'sponsors' %}
     {% render_bundle 'speakers' %}

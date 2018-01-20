@@ -1,20 +1,20 @@
 <template>
-  <div class="sponsor-container">
+  <div class="partner-container">
     <div class="row">
+      <div class="col-sm-9 text-justify">
+        <div class="partner-name text-right">
+          <a v-bind:href="partner.link">{{ partner.name }}</a>
+        </div>
+        <div class="partner-description">
+          {{ partner.description }}
+        </div>
+      </div>
       <div class="col-sm-3 text-center">
-        <avatar :src="sponsor.image"
-                :username="sponsor.name"
+        <avatar :src="partner.image"
+                :username="partner.name"
                 background-color="#e96de3"
                 :size="250">
         </avatar>
-      </div>
-      <div class="col-sm-9 text-justify">
-        <div class="sponsor-name">
-          <a v-bind:href="sponsor.link">{{ sponsor.name }}</a>
-        </div>
-        <div class="sponsor-description">
-          {{ sponsor.description }}
-        </div>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
     Avatar
   },
   props: {
-    sponsor: [Object]
+    partner: [Object]
   },
   data () {
     return {
@@ -37,26 +37,31 @@ export default {
 </script>
 
 <style>
-.sponsor-container {
+.partner-container {
   margin-top: 2vw;
 }
-.sponsors-section > .content {
+
+.partners-section > .content {
   margin-left: 7vw;
   margin-right: 7vw;
 }
-.sponsor-name {
+
+.partner-name {
   margin-bottom: 1vw;
 }
-.sponsor-name > a {
+
+.partner-name > a {
   text-decoration: none;
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
   font-size: 3vw;
 }
-.sponsor-description {
+
+.partner-description {
   font-family: "Circular-Pro-Book";
   color: #501cd7;
   font-size: 1.2vw;
   min-height: 5vw;
 }
 </style>
+
