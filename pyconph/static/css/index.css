@@ -125,7 +125,6 @@ body {
 }
 
 .organizers-section > .content > .title,
-.sponsors-section > .content > .title,
 .partners-section > .content > .title,
 .speakers-section > .content > .title {
   font-family: "Circular-Pro-Bold";
@@ -135,7 +134,6 @@ body {
 }
 
 .partners-section > .content > .partner-type > .title,
-.sponsors-section > .content > .sponsor-type > .title,
 .speakers-section > .content > .keynote > .title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
@@ -155,7 +153,6 @@ body {
   margin-top: 2vw;
 }
 
-.sponsor-image,
 .keynote-image {
   max-width: 18vw;
   max-height: 18vw;
@@ -293,9 +290,6 @@ body {
   font-size: 1.7vw;
 }
 
-.sponsors-section > .content > .sponsor-type > .container {
-  margin-top: 2vw;
-}
 
 #python-ph-logo {
   background-image: url(../images/organizers/pythonph-logo.svg);

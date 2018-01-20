@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="sponsor-container">
     <div class="row">
       <div class="col-sm-3 text-center">
         <avatar :src="sponsor.image"
@@ -37,14 +37,17 @@ export default {
 </script>
 
 <style>
-.sponsors-section > .content{
+.sponsor-container {
+  margin-top: 2vw;
+}
+.sponsors-section > .content {
   margin-left: 7vw;
   margin-right: 7vw;
 }
-.sponsor-name{
+.sponsor-name {
   margin-bottom: 1vw;
 }
-.sponsor-name > a{
+.sponsor-name > a {
   text-decoration: none;
   font-family: "Circular-Pro-Bold";
   color: #501cd7;

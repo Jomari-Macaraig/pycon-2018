@@ -1,14 +1,14 @@
 <template>
-  <section class="sponsors-section">
+  <div class="sponsors-section">
     <div class="content">
-      <div class="title">
+      <div class="sponsor-title">
         Sponsors
       </div>
       <sponsor-type v-for="type in sponsorTypes"
                     v-bind:type="type">
       </sponsor-type>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -40,4 +40,10 @@ export default {
 </script>
 
 <style>
+.sponsor-title {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 6vw;
+  font-weight: bold;
+}
 </style>

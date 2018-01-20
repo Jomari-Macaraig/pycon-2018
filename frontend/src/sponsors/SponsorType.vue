@@ -1,6 +1,6 @@
 <template>
   <div v-if="haveSponsor" class="sponsor-type">
-    <div class="title">
+    <div class="sponsor-type-title">
       {{ type.name }}
     </div>
     <sponsor v-for="sponsor in sponsors"
@@ -46,4 +46,10 @@ export default {
 </script>
 
 <style>
+.sponsor-type-title {
+  font-family: "Circular-Pro-Bold";
+  color: #501cd7;
+  font-size: 3vw;
+  font-weight: bold;
+}
 </style>
