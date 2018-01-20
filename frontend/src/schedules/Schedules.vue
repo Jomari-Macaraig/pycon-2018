@@ -1,6 +1,6 @@
 <template>
-  <div class="schedule-section">
-    <div class="content">
+  <div id="schedule-section">
+    <div id="schedule-content">
       <div class="title">
         Schedule
       </div>
@@ -63,17 +63,26 @@ export default {
 
 
 <style>
-.schedule-section {
+#schedule-section {
   background-color: #e1e1e1;
-  min-height: 100vw;
+  min-height: 120vw;
+  background-image: url(../assets/schedules/schedule-bottom.png),
+                    url(../assets/schedules/schedule-3.png),
+                    url(../assets/schedules/schedule-2.png),
+                    url(../assets/schedules/schedule-1.png);
+  background-repeat: no-repeat;
+  background-position: bottom, right, left 25%, 95% 5%;
+  background-size: contain, 20vw, 15vw, 20vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.schedule-section > .content {
-  margin-top: 7vw;
-  margin-left: 7vw;
+#schedule-content {
+  padding-top: 7vw;
+  padding-left: 7vw;
 }
 
-.schedule-section > .content > .title {
+#schedule-content > .title {
   font-family: "Circular-Pro-Bold";
   color: #501cd7;
   font-size: 6vw;

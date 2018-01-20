@@ -4,3 +4,12 @@ venv/
 db.sqlite3
 
 .env
+
+run/
+logs/
+frontend/package-lock.json
+frontend/webpack-stats.json
+pyconph/assets/
+pyconph/media/
+pyconph/static/webpack_bundles
+node_modules/
