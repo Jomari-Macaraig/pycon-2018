@@ -4,7 +4,8 @@ var BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
   entry: {
-    keynotes: './src/speaker/main.js',
+    speakers: './src/speaker/main.js',
+    schedules: './src/schedules/main.js',
   },
   output: {
     path: path.resolve('../pyconph/static/webpack_bundles/'),

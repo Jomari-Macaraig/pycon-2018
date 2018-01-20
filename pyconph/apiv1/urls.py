@@ -2,7 +2,11 @@ from django.conf.urls import url, include
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from .views import KeynoteListAPIView, NormalSpeakerListAPIView
+from .views import (
+    KeynoteListAPIView,
+    NormalSpeakerListAPIView,
+    ScheduleListAPIView,
+)
 
 
 speaker_patterns = format_suffix_patterns([
@@ -18,6 +22,15 @@ speaker_patterns = format_suffix_patterns([
     ),
 ])
 
+schedule_patterns = format_suffix_patterns([
+    url(
+        r'day/(?P<day>[0-9]+)/',
+        ScheduleListAPIView.as_view(),
+        name='schedule_list'
+    ),
+])
+
 urlpatterns = [
     url(r'speakers', include(speaker_patterns, namespace='speakers')),
+    url(r'schedule', include(schedule_patterns, namespace='schedule')),
 ]

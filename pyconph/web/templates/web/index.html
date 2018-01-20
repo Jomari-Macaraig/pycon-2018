@@ -21,9 +21,11 @@
     {% include 'web/about.html' %}
     {% include 'web/speakers.html' %}
     {% include 'web/speakers-bottom.html' %}
+    <section id="schedules"></section>
     {% include 'web/osp.html' %}
     {% include 'web/code-of-conduct.html' %}
     {% include 'web/code-of-conduct-bottom.html' %}
-    {% render_bundle 'keynotes' %}
+    {% render_bundle 'schedules' %}
+    {% render_bundle 'speakers' %}
   </body>
 </html>

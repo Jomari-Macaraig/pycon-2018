@@ -1,8 +1,10 @@
 <template>
   <div class="col-sm-3 keynote-profile">
-    <img class="other-image img-circle"
-         v-bind:src="image"
-         v-tooltip="{html: tooltipContent, offset: 30}"/>
+    <avatar :src="image"
+            :username="name"
+            :size="175"
+            v-tooltip="{html: tooltipContent, offset: 30, delay: 0}">
+    </avatar>
     <div class="other-name">
       {{ name }}
     </div>
@@ -20,8 +22,12 @@
 </template>
 
 <script>
+import Avatar from 'vue-avatar'
 
 export default {
+  components: {
+    Avatar
+  },
   props: ['id', 'name', 'company_name', 'job_title', 'description', 'image'],
   computed: {
     showDetails () {

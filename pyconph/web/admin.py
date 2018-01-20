@@ -4,6 +4,7 @@ from .models import (
     Volunteer,
     Partner,
     PartnerType,
+    Schedule,
     Speaker,
     Sponsor,
     SponsorType
@@ -27,9 +28,13 @@ class PartnerAdmin(admin.ModelAdmin):
 class PartnerTypeAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
 
+class ScheduleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'speaker', 'name', 'start_time', 'end_time', 'day')
+
 admin.site.register(Volunteer, VolunteerAdmin)
 admin.site.register(Partner, PartnerAdmin)
 admin.site.register(PartnerType, PartnerTypeAdmin)
+admin.site.register(Schedule, ScheduleAdmin)
 admin.site.register(Speaker, SpeakerAdmin)
 admin.site.register(Sponsor, SponsorAdmin)
 admin.site.register(SponsorType, SponsorTypeAdmin)

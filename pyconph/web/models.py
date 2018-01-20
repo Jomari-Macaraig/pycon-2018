@@ -57,3 +57,18 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Schedule(models.Model):
+    DAY1 = 1
+    DAY2 = 2
+    CHOICES = (
+        (DAY1, 'DAY1'),
+        (DAY2, 'DAY2')
+    )
+    name = models.CharField(max_length=64)
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    description = models.TextField(null=True, blank=True)
+    speaker = models.ForeignKey(Speaker, null=True, blank=True)
+    day = models.IntegerField(choices=CHOICES, default=DAY1)

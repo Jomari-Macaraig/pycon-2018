@@ -14,4 +14,3 @@ new Vue({
   el: '#speakers',
   render: h => h(Speakers)
 })
-
