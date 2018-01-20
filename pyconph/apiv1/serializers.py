@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
-from pyconph.web.models import Speaker, Schedule
+from pyconph.web.models import (
+    Schedule,
+    Speaker,
+    SponsorType,
+)
 
 
 class ScheduleSerializer(serializers.ModelSerializer):
@@ -42,4 +46,14 @@ class SpeakerSerializer(serializers.ModelSerializer):
             'job_title',
             'description',
             'image',
+        )
+
+
+class SponsorTypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SponsorType
+        fields = (
+            'id',
+            'name'
         )

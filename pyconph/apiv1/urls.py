@@ -6,6 +6,7 @@ from .views import (
     KeynoteListAPIView,
     NormalSpeakerListAPIView,
     ScheduleListAPIView,
+    SponsorTypeListAPIView,
 )
 
 
@@ -30,7 +31,16 @@ schedule_patterns = format_suffix_patterns([
     ),
 ])
 
+sponsor_patterns = format_suffix_patterns([
+    url(
+        r'type/list/',
+        SponsorTypeListAPIView.as_view(),
+        name='sponsor_list'
+    ),
+])
+
 urlpatterns = [
     url(r'speakers', include(speaker_patterns, namespace='speakers')),
     url(r'schedule', include(schedule_patterns, namespace='schedule')),
+    url(r'sponsors', include(sponsor_patterns, namespace='sponsors')),
 ]
