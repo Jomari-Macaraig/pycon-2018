@@ -8,8 +8,8 @@
                  :company_name="speaker.company_name"
                  :job_title="speaker.job_title"
                  :description="speaker.description"
-                 :image="speaker.image"></speaker>
-      </div>
+                 :image="speaker.image">
+        </speaker>
       </div>
     </div>
   </div>

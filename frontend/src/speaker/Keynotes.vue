@@ -12,7 +12,8 @@
                  :company_name="speaker.company_name"
                  :job_title="speaker.job_title"
                  :description="speaker.description"
-                 :image="speaker.image"></keynote>
+                 :image="speaker.image">
+        </keynote>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-sm-3 keynote-profile">
+  <div class="col-sm-3 other-profile">
     <avatar :src="image"
             :username="name"
             :size="175"
@@ -49,6 +49,11 @@ export default {
 <style>
 #description {
   word-wrap: break-word;
+}
+.other-profile {
+  margin-top: 2vw;
+  max-height: 30vw;
+  height: 25vw;
 }
 </style>
 
