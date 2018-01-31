@@ -59,12 +59,19 @@ class Partner(models.Model):
         return self.name
 
 
+class Track(models.Model):
+    name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name
+
+
 class Schedule(models.Model):
     DAY1 = 1
     DAY2 = 2
     CHOICES = (
         (DAY1, 'DAY1'),
-        (DAY2, 'DAY2')
+        (DAY2, 'DAY2'),
     )
     name = models.CharField(max_length=64)
     start_time = models.TimeField()
@@ -72,6 +79,7 @@ class Schedule(models.Model):
     description = models.TextField(null=True, blank=True)
     speaker = models.ForeignKey(Speaker, null=True, blank=True)
     day = models.IntegerField(choices=CHOICES, default=DAY1)
+    track = models.ForeignKey(Track, null=True, blank=True)
 
     def __str__(self):
         return self.name

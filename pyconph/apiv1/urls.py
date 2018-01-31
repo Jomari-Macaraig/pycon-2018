@@ -10,6 +10,7 @@ from .views import (
     ScheduleListAPIView,
     SponsorListAPIView,
     SponsorTypeListAPIView,
+    TrackListAPIView,
 )
 
 
@@ -28,9 +29,14 @@ speaker_patterns = format_suffix_patterns([
 
 schedule_patterns = format_suffix_patterns([
     url(
-        r'day/(?P<day>[0-9]+)/',
+        r'day/(?P<day>[0-9]+)/track/(?P<track_id>[0-9]+)/$',
         ScheduleListAPIView.as_view(),
         name='schedule_list'
+    ),
+    url(
+        r'day/(?P<day>[0-9]+)/tracks/$',
+        TrackListAPIView.as_view(),
+        name='schedule_day_track_list'
     ),
 ])
 

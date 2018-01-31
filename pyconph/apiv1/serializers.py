@@ -7,6 +7,7 @@ from pyconph.web.models import (
     Speaker,
     Sponsor,
     SponsorType,
+    Track,
 )
 
 
@@ -51,6 +52,7 @@ class ScheduleSerializer(serializers.ModelSerializer):
             'end_time',
             'day',
             'speaker',
+            'track',
         )
 
     def get_speaker(self, obj):
@@ -63,6 +65,15 @@ class ScheduleSerializer(serializers.ModelSerializer):
     def get_end_time(self, obj):
         return obj.end_time.strftime('%l:%M%p')
 
+
+class TrackSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Track
+        fields = (
+            'id',
+            'name',
+        )
 
 class SpeakerSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()

@@ -7,7 +7,8 @@ from .models import (
     Schedule,
     Speaker,
     Sponsor,
-    SponsorType
+    SponsorType,
+    Track,
 )
 
 class VolunteerAdmin(admin.ModelAdmin):
@@ -29,7 +30,10 @@ class PartnerTypeAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
 
 class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'speaker', 'name', 'start_time', 'end_time', 'day')
+    list_display = ('id', 'speaker', 'name', 'start_time', 'end_time', 'day', 'track')
+
+class TrackAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
 
 admin.site.register(Volunteer, VolunteerAdmin)
 admin.site.register(Partner, PartnerAdmin)
@@ -38,3 +42,5 @@ admin.site.register(Schedule, ScheduleAdmin)
 admin.site.register(Speaker, SpeakerAdmin)
 admin.site.register(Sponsor, SponsorAdmin)
 admin.site.register(SponsorType, SponsorTypeAdmin)
+admin.site.register(Track, TrackAdmin)
+

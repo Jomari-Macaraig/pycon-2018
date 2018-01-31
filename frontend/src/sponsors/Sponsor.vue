@@ -5,6 +5,7 @@
         <avatar :src="sponsor.image"
                 :username="sponsor.name"
                 background-color="#e96de3"
+                :customStyle="customStyle"
                 :size="250">
         </avatar>
       </div>
@@ -31,6 +32,10 @@ export default {
   },
   data () {
     return {
+      customStyle: {
+        "border": "1px solid black",
+        "box-shadow": ".5vw 1vw .75vw black"
+      }
     }
   }
 }

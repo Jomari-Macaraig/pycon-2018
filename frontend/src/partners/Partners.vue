@@ -2,7 +2,7 @@
   <div class="partners-section">
     <div class="content">
       <div class="partner-title">
-        Partner
+        Partners
       </div>
       <partner-type v-for="type in partnerTypes"
                     v-bind:type="type">

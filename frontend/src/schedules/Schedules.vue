@@ -7,21 +7,14 @@
       <div class="title" v-if="!hasSchedule">
         Schedule (Coming soon)
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <schedule v-bind:schedules="scheduleDay1"
-                      v-bind:day="'Feb 24'">
-            </schedule>
-          </div>
-          <div class="col-sm-5">
-            <schedule v-bind:schedules="scheduleDay2"
-                      v-bind:day="'Feb 25'">
-            </schedule>
-          </div>
-          </div>
-          <div class="col-sm-2"></div>
-        </div>
+      <schedule v-bind:tracks="tracksDay1"
+                v-bind:day="'1'"
+                v-bind:day_title="'Feb 24'">
+      </schedule>
+      <schedule v-bind:tracks="tracksDay2"
+                v-bind:day="'2'"
+                v-bind:day_title="'Feb 25'">
+      </schedule>
       </div>
     </div>
   </div>
@@ -40,29 +33,29 @@ export default {
   },
   data () {
     return {
-      scheduleDay1: [],
-      scheduleDay2: [],
+      tracksDay1: [],
+      tracksDay2: [],
     }
   },
   computed: {
     hasSchedule () {
-      let hasSchedule = this.scheduleDay1.length || this.scheduleDay2.length ? true : false;
+      let hasSchedule = this.tracksDay1.length || this.tracksDay2.length ? true : false;
       return hasSchedule;
     }
   },
   created () {
-    let day1 = 'apiv1/schedule/day/1/';
+    let day1 = 'apiv1/schedule/day/1/tracks/';
     axios.get(day1)
       .then((response) => {
-        this.scheduleDay1 = response.data;
+        this.tracksDay1 = response.data;
       })
       .catch((error) => {
         console.log(error)
       })
-    let day2 = 'apiv1/schedule/day/2/';
+    let day2 = 'apiv1/schedule/day/2/tracks/';
     axios.get(day2)
       .then((response) => {
-        this.scheduleDay2 = response.data;
+        this.tracksDay2 = response.data;
       })
       .catch((error) => {
         console.log(error)

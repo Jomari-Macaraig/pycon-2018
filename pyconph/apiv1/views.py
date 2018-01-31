@@ -7,6 +7,7 @@ from .serializers import (
     SpeakerSerializer,
     SponsorSerializer,
     SponsorTypeSerializer,
+    TrackSerializer,
 )
 from pyconph.web.models import (
     Partner,
@@ -15,6 +16,7 @@ from pyconph.web.models import (
     Speaker,
     Sponsor,
     SponsorType,
+    Track,
 )
 
 
@@ -43,8 +45,19 @@ class ScheduleListAPIView(ListAPIView):
 
     def get_queryset(self):
         return self.model.objects.filter(
-            day=self.kwargs['day']
+            day=self.kwargs['day'],
+            track_id=self.kwargs['track_id']
         ).order_by('start_time')
+
+
+class TrackListAPIView(ListAPIView):
+    model = Track
+    serializer_class = TrackSerializer
+
+    def get_queryset(self):
+        return self.model.objects.filter(
+            schedule__day=self.kwargs['day']
+        ).values('id', 'name').distinct()
 
 
 class KeynoteListAPIView(ListAPIView):
