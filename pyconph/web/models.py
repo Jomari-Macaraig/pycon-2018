@@ -73,7 +73,7 @@ class Schedule(models.Model):
         (DAY1, 'DAY1'),
         (DAY2, 'DAY2'),
     )
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=254)
     start_time = models.TimeField()
     end_time = models.TimeField()
     description = models.TextField(null=True, blank=True)
