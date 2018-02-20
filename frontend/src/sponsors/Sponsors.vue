@@ -1,8 +1,10 @@
 <template>
-  <div class="sponsors-section">
+  <div class="sponsors-section" id="sponsor-section">
     <div class="content">
       <div class="sponsor-title">
-        Sponsors
+        <a href="#sponsor-section" class="link-nostyle">
+          Sponsors
+        </a>
       </div>
       <sponsor-type v-for="type in sponsorTypes"
                     v-bind:type="type">

@@ -315,3 +315,9 @@ body {
   margin-top: 7vw;
   margin-left: 7vw;
 }
+
+
+.link-nostyle:link, .link-nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+}

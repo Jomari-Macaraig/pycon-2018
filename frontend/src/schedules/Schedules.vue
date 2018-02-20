@@ -2,7 +2,9 @@
   <div id="schedule-section">
     <div id="schedule-content">
       <div class="title" v-if="hasSchedule">
-        Schedule
+        <a href="#schedule-section" class="link-nostyle">
+          Schedule
+        </a>
       </div>
       <div class="title" v-if="!hasSchedule">
         Schedule (Coming soon)
